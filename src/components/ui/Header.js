@@ -38,6 +38,13 @@ function ElevationScroll(props) {
     ...theme.typography.tab,
      minWidth: 10,
      marginLeft: '25px'
+   },
+   button: {
+     ...theme.typography.estimate,
+      borderRadius: "50px",
+      marginLeft: "50px",
+      marginRight: "25px",
+      height: "45px",
    }
  }))
 
@@ -56,9 +63,7 @@ export default function Header(props) {
                   <Tab className={classes.tab} label="About Us" />
                   <Tab className={classes.tab} label="Contact Us" />
                 </Tabs>
-                <Button>
-                  Free Estimate
-                </Button>
+                <Button variant="contained" color="secondary" className={classes.button}>Free Estimate</Button>
                 {/* <Typography variant="h3" color="secondary"> */}
                   {/* Arc Development
                 </Typography> */}
