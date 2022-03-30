@@ -121,7 +121,7 @@ export default function Header(props) {
                     aria-haspopup={anchoreEl ? "true" : undefined}
                     className={classes.tab} 
                     component={Link} 
-                    onClick={event => handleClick(event)}
+                    onMouseOver={event => handleClick(event)}
                     to="/services" 
                     label="Services" 
                   />
@@ -148,10 +148,16 @@ export default function Header(props) {
                 >
                   Free Estimate
                 </Button>
-                <Menu id="simple-menu" anchorEl={anchoreEl} open={open} onClose={handleClose}>
+                <Menu 
+                  id="simple-menu" 
+                  anchorEl={anchoreEl} 
+                  open={open} 
+                  onClose={handleClose}
+                  MenuListProps={{onMouseLeave: handleClose}}
+                >
                   <MenuItem onClick={handleClose}>Custom Software Development</MenuItem>
                   <MenuItem onClick={handleClose}>Mobile App Development</MenuItem>
-                  <MenuItem onClick={handleClose}>Website Development</MenuItem>
+                  <MenuItem onClick={handleClose}>Website Software Development</MenuItem>
                 </Menu>
               </Toolbar>
           </AppBar>
