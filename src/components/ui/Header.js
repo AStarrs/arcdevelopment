@@ -54,6 +54,13 @@ function ElevationScroll(props) {
       marginLeft: "50px",
       marginRight: "25px",
       height: "45px",
+   },
+   menu: {
+     backgroundColor: theme.palette.common.blue,
+     color: "white"
+   },
+   menuItem: {
+     ...theme.typography.tab
    }
  }))
 
@@ -153,29 +160,35 @@ export default function Header(props) {
                   anchorEl={anchoreEl} 
                   open={open} 
                   onClose={handleClose}
+                  classes={{paper: classes.menu}}
                   MenuListProps={{onMouseLeave: handleClose}}
+                  elevation={0}
                 >
                   <MenuItem 
                     onClick={() => {handleClose(); setValue(1)}} 
                     component={Link} to="/services"
+                    classes={{root: classes.menuItem}}
                   >
                     Services
                   </MenuItem>
                   <MenuItem 
                     onClick={() => {handleClose(); setValue(1)}} 
                     component={Link} to="/customsoftware"
+                    classes={{root: classes.menuItem}}
                   >
                     Custom Software Development
                   </MenuItem>
                   <MenuItem 
                     onClick={() => {handleClose(); setValue(1)}} 
                     component={Link} to="/mobileapps"
+                    classes={{root: classes.menuItem}}
                   >
                     Mobile App Development
                   </MenuItem>
                   <MenuItem 
                     onClick={() => {handleClose(); setValue(1)}} 
                     component={Link} to="/websites"
+                    classes={{root: classes.menuItem}}
                   >
                     Website Software Development
                   </MenuItem>
